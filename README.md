@@ -29,10 +29,11 @@ JDBC 4.1 버전만 수정했다. (`3`과 `4`를 요즘 사용할...까?)
 메이븐 설정 예:
 
 ```xml
+<project>
     <repositories>
         <repository>
-            <id>jfrog</id>
-            <url>https://antop.jfrog.io/artifactory/maven/</url>
+            <id>log4jdbc-log4j2-maven</id>
+            <url>https://raw.githack.com/antop-dev/log4jdbc-log4j2-jdbc4.1/master/maven/</url>
         </repository>
     </repositories>
 
@@ -43,15 +44,16 @@ JDBC 4.1 버전만 수정했다. (`3`과 `4`를 요즘 사용할...까?)
             <version>1.16-kr</version>
         </dependency>
     </dependencies>
+</project>
 ```
 
 그래들 설정 예:
 
-```kotlin
+```groovy
 repositories {
     mavenCentral()
     maven {
-        url = uri("https://antop.jfrog.io/artifactory/maven/")
+        url = uri("https://raw.githack.com/antop-dev/log4jdbc-log4j2-jdbc4.1/master/maven/")
         metadataSources {
             mavenPom()
             artifact()
